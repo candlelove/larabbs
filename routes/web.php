@@ -38,3 +38,8 @@ Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->na
 Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 //等同结束--------------
 
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+//等同以下
+//Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+//Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+//Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
