@@ -1,5 +1,6 @@
 <?php
 
+//use App\Models\Reply;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,5 +14,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UserTableSeeder::class);
         $this->call(TopicsTableSeeder::class);
+        $this->call(RepliesTableSeeder::class);
     }
 }
