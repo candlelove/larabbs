@@ -19,7 +19,7 @@ class TopicReplied extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Reply $reply)
     {
         // 注入回复实体，方便 toDatabase 方法中的使用
         $this->reply = $reply;
